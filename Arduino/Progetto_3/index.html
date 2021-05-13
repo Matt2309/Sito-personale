@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Progetto 3</title>
+</head>
+<body>
+    <div id="header">
+        <a href="../../Home/index.html">
+            <p id="titolo">MULARONI MATTIA</p>
+        </a>
+        
+        <div class="lbl-link">
+            <a href="../Chi sono/chiSono.html">
+                <p class="link">CHI SONO</p>
+            </a>
+            <a href="https://github.com/Matt2309">
+                <p class="link">GITHUB</p>
+            </a>
+            <a href="../index.html">
+                <p class="link">PROGETTI</p>
+            </a>            
+        </div>
+
+        <div id="social">
+            <a href="#">
+                <img src="../../Home/social/Instagram.png" class="dim">
+            </a>
+            <a href="#">
+                <img src="../../Home/social/Facebook.png" class="dim">
+            </a>
+            <a href="#">
+                <img src="../../Home/social/Linkedin.png" class="dim">
+            </a>
+            <a href="#">
+                <img src="../../Home/social/Twitter.png" class="dim">
+            </a>  
+        </div>
+    </div>
+
+    <div class="title-header">
+        <p id="tlt-header">PROGETTI ARDUINO</p>
+    </div>
+
+    <div class="page">
+        <div class="divide">
+            <div class="progetto">
+                <div class="presentazione" id="pres">
+                        <p id="project-title">MACCHININA HOME MADE PILOTATA CON CONTROLLER A GUANTO</p>
+                    <div class="linea"></div>
+
+                    <div class="slider" width="70%">
+                        <div class="slidePhoto fade">
+                            <img src="./Macchinina SIR v3.png" width="100%" height="auto" class="head-photo">
+                        </div>
+
+                        <div class="slidePhoto fade">
+                            <img src="./Macchinina HomeMade.png" width="100%" height="auto" class="head-photo">
+                        </div>
+                        
+                        <div class="slidePhoto fade">
+                            <iframe src="https://www.tinkercad.com/embed/g98E5HNFaN0?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+                        </div>
+                        
+                        <a class="prev" onclick="cambiaSlide(-1)">&#10094;</a>
+                        <a class="next" onclick="cambiaSlide(1)">&#10095;</a>
+                    </div>
+
+                    <div class="dot-container">
+                        <span class="dot" onclick="slideCorrente(1)"></span>
+                        <span class="dot" onclick="slideCorrente(2)"></span>
+                        <span class="dot" onclick="slideCorrente(3)"></span>
+                    </div>
+                    
+                    <div class="pres">
+                        <div class="boxtesto">
+                            <p>Funzionamento</p>
+                            <p>Arduino riceve in input un segnale analogico dal flexor (il quale può variare a seconda della resistenza immessa), ed a seconda di quanto si piegano i sensori, verrà modificata la velocità e la direzione della macchinina.
+                                <br>Questo progetto è propedeutico a progetti più grandi nei quali è necessaria una buona conoscenza di questo componente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tabella" id="tab">
+                    <p id="project-title">Lista componenti</p>
+                    <table id="table">
+                        <tr>
+                            <th id="sx">IMMAGINE</th><th>NOME PRODOTTO</th><th>QUANTITÀ</th><th id="dx">LINK</th>
+                        </tr>
+                        <tr>
+                            <td><img src="https://cdn.pixabay.com/photo/2017/03/23/12/32/arduino-2168193_1280.png" class="tb-photo" alt="arduino"></td><td>ARDUINO UNO</td><td>1</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://www.robotstore.it/open2b/var/products/0/20/0-3d892a4e-500-Breadboard-830-punti.jpg" class="tb-photo" alt="breadboard"></td><td>BREADBOARD</td><td>1</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://cdn.sparkfun.com//assets/parts/4/6/2/6/10264-01.jpg" class="tb-photo" alt="arduino"></td><td>FLEXOR</td><td>1</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://opencircuit.shop/resources/content/4d31362984068/crop/1200-630/DC-Geared-Motor.jpg" class="tb-photo" alt="arduino"></td><td>MOTORI DC</td><td>3</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://images-na.ssl-images-amazon.com/images/I/612rwSsdD0L._AC_SX522_.jpg" class="tb-photo" alt="arduino"></td><td>TELAIO MACCHINA</td><td>1</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://www.twinschip.com/image/cache/catalog/Products%20Twins%20Chip%20Store%202020/1M%20Ohm%20Resistor%20X%205%20Pieces/1M%20Ohm%20Resistor-600x315w.jpeg" class="tb-photo" alt="arduino"></td><td>RESISTORI 10K</td><td>3</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://aaenics.com/wp-content/uploads/2019/10/male-to-male-flex.jpg" class="tb-photo" alt="arduino"></td><td>JUMPERS</td><td>17</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="funzionamento">
+                    <p id="project-title">Funzionamento</p>
+                    <p class="paragrafo" id="par1">1. Flexor</p>
+                    <p class="text" id="funz">
+                        Il flexor è una resistenza variabile, ovvero che a seconda della flessione del sensore varia la sua resistenza da un minimo ad un massimo, solitamente si presenta con una struttura a 2 pin, il primo viene messo a massa mentre il secondo viene alimentato dai 5v mediante una resistenza e viene rilevato il segnale dall'analogico di Arduino.
+                    </p>
+                    <img src="https://cdn.sparkfun.com//assets/parts/4/6/2/6/10264-01.jpg" class="phototext">
+                    <img src="https://www.marcopucci.it/wp-content/uploads/2014/06/guanto-interattivo.jpg"class="phototext">
+                    <p class="text">
+                        I flexor vengono letti da arduino mediante i suoi pin analogici (in questo caso verranno usati i pin A0 - A1 - A2), essi leggono valori da 0 a 1023, ma potrebbero essere più bassi nel caso si inserisca nel flexor una resistenza più alta, in ogni caso questo non crea problemi, una accortezza invece, potrebbe essere quella di non usare resistenze troppo basse, in quanto il segnale potrebbe arrivare a fondoscala (1023) prima ancora che il flexor arrivi a finecorsa. <br> La scelta della resistenza è dipendente dalle caratteristiche del flexor, è quindi necessario fare delle prove per raggiungere risultati accettabili.
+                        <br>Prestare attenzione alla polarità del flexor, in quanto, se invertito il negativo col positivo, il segnale che arriva ad arduino potrebbe essere inverso.
+                    </p>
+                    <p class="paragrafo" id="par2">2. Motori DC</p>
+                    <p class="text" id="funz">
+                        I motori DC, comunemente detti motori a spazzole, utilizza il campo magnetico generato da dei magneti, i quali fanno girare un rotore, detta armatura, la quale da il moto al componente da far girare.
+                    </p>
+                    <img src="https://opencircuit.shop/resources/content/4d31362984068/crop/1200-630/DC-Geared-Motor.jpg" class="phototext">
+                    <img src="https://www.researchgate.net/publication/342603671/figure/fig3/AS:908551216177158@1593626898885/Anatomy-of-DC-Motor-32-Categorisation-DC-Motor-is-mainly-categorised-as-brushed-and.jpg"class="phototext">
+                    <p class="text">
+                        I motori DC possono essere alimentati sia con i pin digitali che con quelli analogici (nel primo caso si potranno solo accendere o spegnere).
+                        <br>In questo caso verranno utilizzati i pin analogici per riuscire a modulare sia la velocità che la velocità di svolta della macchinina.
+                    </p>
+                    <p class="paragrafo" id="par3">3. Spiegazione codice e lettura valori</p>
+                    <p class="text">
+                        Il programma riceve in input la velocità dal primo flexor, la quale viene "data" direttamente ai motori, mentre i flexor di direzione agiscono ogniuno su un motore, essi moltiplicano il loro valore con quello della velocità in modo da far girare più velocemente una ruota piuttosto che l'altra, avendo come conseguenza la svolta a destra o sinistra della macchina.
+                        <br>
+                        Nel mio caso ho dovuto decrementare i valori dei sensori in quanto i motori avrebbero girato troppo forte.
+                        <br>
+                        Per ottenere una risposta ottimale dai motori, è necessario rilevare tramite il programmma di prova, il valore massimo dei flexor, e si conseguenza, la velocità massima dei motori a seconda sell'inclinazione dei flexor.
+                        <br>
+                        <br>Ecco il codice per la lettura del valore dei flexor.
+                    </p>
+                    <iframe src=https://create.arduino.cc/editor/mattiamularoni/1a4e1179-4ff6-4106-8757-e7d1e14a4881/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+                </div>
+
+                <div class="codice" id="code">
+                    <p id="project-title">Codice</p>
+                    <iframe src=https://create.arduino.cc/editor/mattiamularoni/e08f8d17-a6fd-4aa9-bdbf-16d97bb22ebb/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+                </div>
+            </div> 
+        </div>
+
+        <div class="index-selector">
+            <p id="titolo-index">Indice</p>
+            <div class="linea-index"></div>
+            <a onclick="scrollSez('pres')">
+                <p class="index-link">MACCHININA HOME MADE PILOTATA CON CONTROLLER A GUANTO</p>
+            </a>
+            <a onclick="scrollSez('tab')">
+                <p class="index-link">Lista componenti</p>
+            </a>
+            <a onclick="scrollSez('funz')">
+                <p class="index-link">Funzionamento</p>
+            </a>
+            <a onclick="scrollSez('par1')">
+                <p class="underindex-link">1. Flexor</p>
+            </a>
+            <a onclick="scrollSez('par2')">
+                <p class="underindex-link">2. Motori DC</p>
+            </a>
+            <a onclick="scrollSez('par3')">
+                <p class="underindex-link">3. Spiegazione codice e lettura valori</p>
+            </a>
+            <a onclick="scrollSez('code')">
+                <p class="index-link">Codice</p>
+            </a>
+        </div>
+    </div>
+    <div class="footer">
+        <p id="titolo-footer">MULARONI MATTIA 2021</p>
+
+        <div id="social">
+            <a href="#">
+                <img src="../../Home/social/Instagram.png" class="dim">
+            </a>
+            <a href="#">
+                <img src="../../Home/social/Facebook.png" class="dim">
+            </a>
+            <a href="#">
+                <img src="../../Home/social/Linkedin.png" class="dim">
+            </a>
+            <a href="#">
+                <img src="../../Home/social/Twitter.png" class="dim">
+            </a>  
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>

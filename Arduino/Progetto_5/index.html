@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Progetto 5</title>
+</head>
+<body>
+    <div id="header">
+        <a href="../../Home/index.html">
+            <p id="titolo">MULARONI MATTIA</p>
+        </a>
+        
+        <div class="lbl-link">
+            <a href="../Chi sono/chiSono.html">
+                <p class="link">CHI SONO</p>
+            </a>
+            <a href="https://github.com/Matt2309">
+                <p class="link">GITHUB</p>
+            </a>
+            <a href="../index.html">
+                <p class="link">PROGETTI</p>
+            </a>            
+        </div>
+
+        <div id="social">
+            <a href="#">
+                <img src="../../Home/social/Instagram.png" class="dim">
+            </a>
+            <a href="#">
+                <img src="../../Home/social/Facebook.png" class="dim">
+            </a>
+            <a href="#">
+                <img src="../../Home/social/Linkedin.png" class="dim">
+            </a>
+            <a href="#">
+                <img src="../../Home/social/Twitter.png" class="dim">
+            </a>  
+        </div>
+    </div>
+
+    <div class="title-header">
+        <p id="tlt-header">PROGETTI ARDUINO</p>
+    </div>
+
+    <div class="page">
+        <div class="divide">
+            <div class="progetto">
+                <div class="presentazione" id="pres">
+                        <p id="project-title">PROVA A PRENDERLO</p>
+                    <div class="linea"></div>
+
+                    <div class="slider" width="70%">
+
+                        <div class="slidePhoto fade">
+                            <img src="./Prova a prenderlo SIR v5.png" width="100%" height="auto" class="head-photo">
+                        </div>
+
+                        <div class="slidePhoto fade">
+                            <img src="./Prova a prenderlo SIR 2.png" width="100%" height="auto" class="head-photo">
+                        </div>
+
+                        <div class="slidePhoto fade">
+                            <img src="./Prova a prenderlo SIR 3.png" width="100%" height="auto" class="head-photo">
+                        </div>
+
+                        <div class="slidePhoto fade">
+                            <iframe width="900px" height="500px" src="https://www.tinkercad.com/embed/gSbBSY0Ivjo?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+                        </div>
+                        
+                        <a class="prev" onclick="cambiaSlide(-1)">&#10094;</a>
+                        <a class="next" onclick="cambiaSlide(1)">&#10095;</a>
+                    </div>
+
+                    <div class="dot-container">
+                        <span class="dot" onclick="slideCorrente(1)"></span>
+                        <span class="dot" onclick="slideCorrente(2)"></span>
+                        <span class="dot" onclick="slideCorrente(3)"></span>
+                        <span class="dot" onclick="slideCorrente(4)"></span>
+                    </div>
+                    
+                    <div class="pres">
+                        <div class="boxtesto">
+                            <p>Funzionamento</p>
+                            <p>Arduino controlla che nelle vicinanze dell'oggetto da 'proteggere' non ci sia nulla, se rileva un movimento fa scattare la trappola che blocca la mano tra le due piastre tramite due servomotori, il sistema è sbloccabile tramite il bottone.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tabella" id="tab">
+                    <p id="project-title">Lista componenti</p>
+                    <table id="table">
+                        <tr>
+                            <th id="sx">IMMAGINE</th><th>NOME PRODOTTO</th><th>QUANTITÀ</th><th id="dx">LINK</th>
+                        </tr>
+                        <tr>
+                            <td><img src="https://cdn.pixabay.com/photo/2017/03/23/12/32/arduino-2168193_1280.png" class="tb-photo" alt="arduino"></td><td>ARDUINO UNO</td><td>1</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://www.robotstore.it/open2b/var/products/0/20/0-3d892a4e-500-Breadboard-830-punti.jpg" class="tb-photo" alt="breadboard"></td><td>BREADBOARD</td><td>1</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://ardubotics.eu/12226-thickbox_default/towerpro-micro-servo-motor-360-degree-sg90.jpg" class="tb-photo" alt="arduino"></td><td>SERVO MOTORI</td><td>2</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcT0OKgEWc7AJnJ56Df_As1Vcc42z8xvxzPla51WPCGU88lrwZa2Jb7U3Kj3VlfPCAq-hkZLvWPATLSSR9Hf-KdgMn2nXoyRYtIXTchi7b4GKZLz3r41LETcyA&usqp=CAE" class="tb-photo" alt="arduino"></td><td>BOTTONE</td><td>1</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://cf5.s3.souqcdn.com/item/2020/06/18/84/26/01/0/item_L_8426010_3c2c396b43c6f.jpg" class="tb-photo" alt="arduino"></td><td>SENSORE PIR</td><td>1</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://www.twinschip.com/image/cache/catalog/Products%20Twins%20Chip%20Store%202020/1M%20Ohm%20Resistor%20X%205%20Pieces/1M%20Ohm%20Resistor-600x315w.jpeg" class="tb-photo" alt="arduino"></td><td>RESISTORI 10K</td><td>1</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://aaenics.com/wp-content/uploads/2019/10/male-to-male-flex.jpg" class="tb-photo" alt="arduino"></td><td>JUMPERS</td><td>17</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="funzionamento">
+                    <p id="project-title">Funzionamento</p>
+                    <p class="paragrafo" id="par1">1. Sensore PIR</p>
+                    <p class="text" id="funz">
+                        Il sensore PIR è un rilevatore di movimento basato sui fasci di luci infrarosse.
+                    </p>
+                    <br>
+                    <img src="https://cf5.s3.souqcdn.com/item/2020/06/18/84/26/01/0/item_L_8426010_3c2c396b43c6f.jpg" class="phototext">
+                    <img src="https://mindstormengg.com/wp-content/uploads/2019/10/12-03-19-04-37-32.png"class="phototext" style="margin-left: 50px;">
+                    <p class="paragrafo" id="par2">2. Ricavare informazioni dal sensore PIR</p>
+                    <p class="text" id="funz">
+                        Il sensore PIR è di tipo digitale e volumetrico, ovvero che quando esso rileverà un cambiamento nel volume (una stanza, un magazzino, ecc..) che sta analizzando in quel momento cambierà il suo stato da basso ad alto (da 0 ad 1); dal momento che il segnale tornerà stabile (e questo non vuol dire che la stanza sia ritornata alla disposizione originale) esso ritornerà a basso, un esempio lampante è nei bagni, quando si entra e il sensore rileva un cambiamento accende la luce, ma quando è un pò che si sta fermi e il sensore si ristabilizza su delle frequenze "fisse", ritorna a 0 spegnendo la luce.
+                    </p>
+                    <p class="text" id="funz">
+                        Per ricavare un segnale dal PIR utilizzeremo lo stesso sistema di differenza usato nello scorso progetto per il bottone.
+                    </p>
+                    <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);">pirValue = <span class="hljs-built_in" style="color: rgb(57, 115, 0);">digitalRead</span>(pir);
+                    diff = pirValue - pirValuePre;
+                    pirValuePre = pirValue;
+                    </pre>
+                    <p class="paragrafo" id="par3">3. Servo motori</p>
+                    <br>
+                    <img src="https://ardubotics.eu/12226-thickbox_default/towerpro-micro-servo-motor-360-degree-sg90.jpg" class="phototext">
+                    <p class="text" id="funz">
+                        Il motore servo è un tipo di motore a coppia e inclinazione variabile, per questo non è da confondere con un tradizionale motore CC a rotazione continua.
+                    </p>
+                    <p class="paragrafo" id="par4">4. Utilizzare il servo motore</p>
+                    <p class="text" id="funz">
+                        Per utilizzare i servo motori ci muniremo della libreria <span style="color: rgb(211, 84, 0);">servo.h</span>.
+                        <br>
+                        All'inizio del setup imposteremo i pin di collegamento dei servo e li porteremo rispettivamente a 180 e 0 gradi in modo da prepararli alla chiusura in caso di rilevazione di movimento.
+                    </p>
+                    <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><span class="hljs-built_in" style="color: rgb(57, 115, 0);">pinMode</span>(pir, <span class="hljs-literal" style="color: rgb(120, 169, 96);">INPUT</span>);
+                        motore1.<span class="hljs-built_in" style="color: rgb(57, 115, 0);">attach</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">11</span>);
+                        motore2.<span class="hljs-built_in" style="color: rgb(57, 115, 0);">attach</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">10</span>);
+                    </pre>
+                    <p class="text" id="funz">
+                        Fatto ciò non ci resta che terminare il codice con l'attivazione del sistema alla rilevazone di un movimento e il relativo sblocco tramite il bottone.
+                    </p>
+                </div>
+
+                <div class="codice" id="code">
+                    <p id="project-title">Codice</p>
+                    <iframe src=https://create.arduino.cc/editor/mattiamularoni/f9c93019-cf77-424e-b21f-6d0ba3459c50/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+                </div>
+            </div> 
+        </div>
+
+        <div class="index-selector">
+            <p id="titolo-index">Indice</p>
+            <div class="linea-index"></div>
+            <a onclick="scrollSez('pres')">
+                <p class="index-link">PROVA A PRENDERLO</p>
+            </a>
+            <a onclick="scrollSez('tab')">
+                <p class="index-link">Lista componenti</p>
+            </a>
+            <a onclick="scrollSez('funz')">
+                <p class="index-link">Funzionamento</p>
+            </a>
+            <a onclick="scrollSez('par1')">
+                <p class="underindex-link">1. Sensore PIR</p>
+            </a>
+            <a onclick="scrollSez('par2')">
+                <p class="underindex-link">2. Ricavare informazioni dal sensore PIR</p>
+            </a>
+            <a onclick="scrollSez('par3')">
+                <p class="underindex-link">3. Servo motori</p>
+            </a>
+            <a onclick="scrollSez('par4')">
+                <p class="underindex-link">4. Utilizzare il servo motore</p>
+            </a>
+            <a onclick="scrollSez('code')">
+                <p class="index-link">Codice</p>
+            </a>
+        </div>
+    </div>
+    <div class="footer">
+        <p id="titolo-footer">MULARONI MATTIA 2021</p>
+
+        <div id="social">
+            <a href="#">
+                <img src="../../Home/social/Instagram.png" class="dim">
+            </a>
+            <a href="#">
+                <img src="../../Home/social/Facebook.png" class="dim">
+            </a>
+            <a href="#">
+                <img src="../../Home/social/Linkedin.png" class="dim">
+            </a>
+            <a href="#">
+                <img src="../../Home/social/Twitter.png" class="dim">
+            </a>  
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>

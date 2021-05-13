@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Progetto 4</title>
+</head>
+<body>
+    <div id="header">
+        <a href="../../Home/index.html">
+            <p id="titolo">MULARONI MATTIA</p>
+        </a>
+        
+        <div class="lbl-link">
+            <a href="../Chi sono/chiSono.html">
+                <p class="link">CHI SONO</p>
+            </a>
+            <a href="https://github.com/Matt2309">
+                <p class="link">GITHUB</p>
+            </a>
+            <a href="../index.html">
+                <p class="link">PROGETTI</p>
+            </a>            
+        </div>
+
+        <div id="social">
+            <a href="#">
+                <img src="../../Home/social/Instagram.png" class="dim">
+            </a>
+            <a href="#">
+                <img src="../../Home/social/Facebook.png" class="dim">
+            </a>
+            <a href="#">
+                <img src="../../Home/social/Linkedin.png" class="dim">
+            </a>
+            <a href="#">
+                <img src="../../Home/social/Twitter.png" class="dim">
+            </a>  
+        </div>
+    </div>
+
+    <div class="title-header">
+        <p id="tlt-header">PROGETTI ARDUINO</p>
+    </div>
+
+    <div class="page">
+        <div class="divide">
+            <div class="progetto">
+                <div class="presentazione" id="pres">
+                        <p id="project-title">MELODIE CON BUZZER</p>
+                    <div class="linea"></div>
+
+                    <div class="slider" width="70%">
+                        <div class="slidePhoto fade">
+                            <iframe width="725" height="453" src="https://www.tinkercad.com/embed/1SAoDgBsTpQ?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+                        </div>
+
+                        <div class="slidePhoto fade">
+                            <img src="./Melodie.png" width="100%" height="auto" class="head-photo">
+                        </div>
+                        
+                        <a class="prev" onclick="cambiaSlide(-1)">&#10094;</a>
+                        <a class="next" onclick="cambiaSlide(1)">&#10095;</a>
+                    </div>
+
+                    <div class="dot-container">
+                        <span class="dot" onclick="slideCorrente(1)"></span>
+                        <span class="dot" onclick="slideCorrente(2)"></span>
+                    </div>
+                    
+                    <div class="pres">
+                        <div class="boxtesto">
+                            <p>Funzionamento</p>
+                            <p>Arduino riceve in input un segnale analogico dal flexor (il quale può variare a seconda della resistenza immessa), ed a seconda di quanto si piegano i sensori, verrà modificata la velocità e la direzione della macchinina.
+                                <br>Questo progetto è propedeutico a progetti più grandi nei quali è necessaria una buona conoscenza di questo componente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tabella" id="tab">
+                    <p id="project-title">Lista componenti</p>
+                    <table id="table">
+                        <tr>
+                            <th id="sx">IMMAGINE</th><th>NOME PRODOTTO</th><th>QUANTITÀ</th><th id="dx">LINK</th>
+                        </tr>
+                        <tr>
+                            <td><img src="https://cdn.pixabay.com/photo/2017/03/23/12/32/arduino-2168193_1280.png" class="tb-photo" alt="arduino"></td><td>ARDUINO UNO</td><td>1</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://www.robotstore.it/open2b/var/products/0/20/0-3d892a4e-500-Breadboard-830-punti.jpg" class="tb-photo" alt="breadboard"></td><td>BREADBOARD</td><td>1</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="data:image/webp;base64,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" class="tb-photo" alt="arduino"></td><td>BUZZER</td><td>1</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcT0OKgEWc7AJnJ56Df_As1Vcc42z8xvxzPla51WPCGU88lrwZa2Jb7U3Kj3VlfPCAq-hkZLvWPATLSSR9Hf-KdgMn2nXoyRYtIXTchi7b4GKZLz3r41LETcyA&usqp=CAE" class="tb-photo" alt="arduino"></td><td>BOTTONI</td><td>2</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://www.twinschip.com/image/cache/catalog/Products%20Twins%20Chip%20Store%202020/1M%20Ohm%20Resistor%20X%205%20Pieces/1M%20Ohm%20Resistor-600x315w.jpeg" class="tb-photo" alt="arduino"></td><td>RESISTORI 10K - 5K</td><td>3</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://aaenics.com/wp-content/uploads/2019/10/male-to-male-flex.jpg" class="tb-photo" alt="arduino"></td><td>JUMPERS</td><td>12</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="funzionamento">
+                    <p id="project-title">Funzionamento</p>
+                    <p class="paragrafo" id="par1">1. Buzzer</p>
+                    <p class="text" id="funz">
+                        Il buzzer è un dispositivo piezoelettrico di output sonoro.
+                    </p>
+                    <img src="https://www.pcboard.ca/image/cache/catalog/products/buzzers/piezo-buzzer/piezo-buzzer-01-500x500.jpg" class="phototext">
+                    <img src="https://zzippgroup.com/14860-large_default/peb-2618s.jpg"class="phototext">
+                    <p class="paragrafo" id="par2">2. Pilotare il buzzer con Arduino</p>
+                    <p class="text" id="funz">
+                        Per poter utilizzare un buzzer con Arduino, e quindi, produrre delle melodie, è sufficiente utilizzare la funzione builtin 'tone()' di Arduino, l'istruzione da impiegare è la seguente:
+                    </p>
+                    <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><span class="hljs-built_in" style="color: rgb(57, 115, 0);">tone</span>(pin,frequenza,durata)
+                    </pre>
+                    <p class="text" id="funz">
+                        Nel primo campo andrà indicato il pin al quale è collegato il buzzer, nel secondo la frequenza del suono che vogliamo emettere e nel terzo il tempo per il quale questo suono deve essere riprodotto.
+                        <br>
+                        Per comporre la melodia sarà quindi necessario comporre una lista di define con le note e la loro frequenza associata e successivamente un array (lo spartito) di quelle note. Per riprodurre il tutto sarà necessario inglobare il codice sopra dentro ad un ciclo for con grandezza pari all'array di note.
+                    </p>
+                    <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(255, 255, 255); color: rgb(67, 79, 84);"><span class="hljs-built_in" style="color: rgb(211, 84, 0);">for</span> ( <span class="hljs-keyword" style="color: rgb(0, 151, 157);">int</span> i = <span class="hljs-number" style="color: rgb(138, 123, 82);">0</span>; i &lt; <span class="hljs-keyword" style="color: rgb(0, 151, 157);">sizeof</span>(melody); i ++ ) {
+                        <span class="hljs-keyword" style="color: rgb(0, 151, 157);">int</span> durata= durataNota*velSuono;
+                        <span class="hljs-built_in" style="color: rgb(211, 84, 0);">tone</span>(pinBuzzer, melody[i], durata);
+                        <span class="hljs-built_in" style="color: rgb(211, 84, 0);">delay</span>(durata*<span class="hljs-number" style="color: rgb(138, 123, 82);">1.3</span>);
+                        <span class="hljs-built_in" style="color: rgb(211, 84, 0);">noTone</span>(pinBuzzer);}
+                    </pre>
+                    <p class="text" id="funz">
+                        Nel caso di questo codice, viene riprodotto un'array di note <span style="color: rgb(211, 84, 0);">melody[i]</span>, il delay corrisponde alla pausa tra una nota e l'altra, la quale è stata moltiplicata per 1.3, perciò le pause saranno 1/3 più lunghe della durata delle note.
+                        <br>
+                        Il comando <span style="color: rgb(211, 84, 0);">noTone()</span> serve a bloccare l'emissione del suono, dopo che una nota è stata riprodotta.
+                    </p>
+                    <br><br>
+                    <p class="text" id="funz">Il codice sottostante contiene anche degli array di pause, i quali vengono trattati esattamente come le note</p>
+                </div>
+
+                <div class="codice" id="code">
+                    <p id="project-title">Codice</p>
+                    <iframe src=https://create.arduino.cc/editor/mattiamularoni/df20ab5c-e175-4150-9c83-8a4367496aa3/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+                </div>
+            </div> 
+        </div>
+
+        <div class="index-selector">
+            <p id="titolo-index">Indice</p>
+            <div class="linea-index"></div>
+            <a onclick="scrollSez('pres')">
+                <p class="index-link">MELODIE CON BUZZER</p>
+            </a>
+            <a onclick="scrollSez('tab')">
+                <p class="index-link">Lista componenti</p>
+            </a>
+            <a onclick="scrollSez('funz')">
+                <p class="index-link">Funzionamento</p>
+            </a>
+            <a onclick="scrollSez('par1')">
+                <p class="underindex-link">1. Buzzer</p>
+            </a>
+            <a onclick="scrollSez('par2')">
+                <p class="underindex-link">2. Pilotare il buzzer con Arduino</p>
+            </a>
+            <a onclick="scrollSez('code')">
+                <p class="index-link">Codice</p>
+            </a>
+        </div>
+    </div>
+    <div class="footer">
+        <p id="titolo-footer">MULARONI MATTIA 2021</p>
+
+        <div id="social">
+            <a href="#">
+                <img src="../../Home/social/Instagram.png" class="dim">
+            </a>
+            <a href="#">
+                <img src="../../Home/social/Facebook.png" class="dim">
+            </a>
+            <a href="#">
+                <img src="../../Home/social/Linkedin.png" class="dim">
+            </a>
+            <a href="#">
+                <img src="../../Home/social/Twitter.png" class="dim">
+            </a>  
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
