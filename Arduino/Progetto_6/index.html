@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Progetto 5</title>
+</head>
+<body>
+    <div id="header">
+        <a href="../../Home/index.html">
+            <p id="titolo">MULARONI MATTIA</p>
+        </a>
+        
+        <div class="lbl-link">
+            <a href="../Chi sono/chiSono.html">
+                <p class="link">CHI SONO</p>
+            </a>
+            <a href="https://github.com/Matt2309">
+                <p class="link">GITHUB</p>
+            </a>
+            <a href="../index.html">
+                <p class="link">PROGETTI</p>
+            </a>            
+        </div>
+
+        <div id="social">
+            <a href="#">
+                <img src="../../Home/social/Instagram.png" class="dim">
+            </a>
+            <a href="#">
+                <img src="../../Home/social/Facebook.png" class="dim">
+            </a>
+            <a href="#">
+                <img src="../../Home/social/Linkedin.png" class="dim">
+            </a>
+            <a href="#">
+                <img src="../../Home/social/Twitter.png" class="dim">
+            </a>  
+        </div>
+    </div>
+
+    <div class="title-header">
+        <p id="tlt-header">PROGETTI ARDUINO</p>
+    </div>
+
+    <div class="page">
+        <div class="divide">
+            <div class="progetto">
+                <div class="presentazione" id="pres">
+                        <p id="project-title">ARDUINO GARDEN SYSTEM</p>
+                    <div class="linea"></div>
+
+                    <div class="slider" width="70%">
+
+                        <div class="slidePhoto fade">
+                            <img src="./IMG_20210425_161009.jpg" height="auto" class="head-photo">
+                        </div>
+
+                        <div class="slidePhoto fade">
+                            <img src="./IMG_20210503_212535.jpg" height="auto" class="head-photo">
+                        </div>
+
+                        <div class="slidePhoto fade">
+                            <img src="./Orto_bb.png" height="auto" class="head-photo">
+                        </div>
+                        
+                        <a class="prev" onclick="cambiaSlide(-1)">&#10094;</a>
+                        <a class="next" onclick="cambiaSlide(1)">&#10095;</a>
+                    </div>
+
+                    <div class="dot-container">
+                        <span class="dot" onclick="slideCorrente(1)"></span>
+                        <span class="dot" onclick="slideCorrente(2)"></span>
+                        <span class="dot" onclick="slideCorrente(3)"></span>
+                    </div>
+                    
+                    <div class="pres">
+                        <div class="boxtesto">
+                            <p>Funzionamento</p>
+                            <p>Con Arduino Garden System è posibile automatizzare la gestione di un orto casalingo mediante Arduino Nano, all'orario impostato dall'utente o all'avvicinamento della card, il sistema farà azionare un relè il quale attiverà un elettrovalvola che inizierà a far scorrere l'acqua nell'impianto di microirrigazione, in qualsiasi momento sarà possibile interrompere il processo semplicemente premendo un pulsante.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tabella" id="tab">
+                    <p id="project-title">Lista componenti</p>
+                    <table id="table">
+                        <tr>
+                            <th id="sx">IMMAGINE</th><th>NOME PRODOTTO</th><th>QUANTITÀ</th><th id="dx">LINK</th>
+                        </tr>
+                        <tr>
+                            <td><img src="https://www.distrelec.it/Web/WebShopImages/landscape_large/73/3f/arduino-nano-A000005-11096733f.jpg" class="tb-photo" alt="arduino"></td><td>ARDUINO NANO</td><td>1</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://www.robotstore.it/open2b/var/products/0/20/0-3d892a4e-500-Breadboard-830-punti.jpg" class="tb-photo" alt="breadboard"></td><td>BREADBOARD</td><td>1</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://hub360.com.ng/wp-content/uploads/2015/11/ds1307-module-1.jpg" class="tb-photo" alt="arduino"></td><td>MODULO RTC 1307</td><td>2</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcT0OKgEWc7AJnJ56Df_As1Vcc42z8xvxzPla51WPCGU88lrwZa2Jb7U3Kj3VlfPCAq-hkZLvWPATLSSR9Hf-KdgMn2nXoyRYtIXTchi7b4GKZLz3r41LETcyA&usqp=CAE" class="tb-photo" alt="arduino"></td><td>PULSANTE</td><td>1</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://ae01.alicdn.com/kf/HTB1tQaqbjzuK1RjSsppq6xz0XXan/1-Set-MFRC-522-RC-522-RC522-RFID-Wireless-IC-Module-S50-Fudan-SPI-Writer-Reader.jpg" class="tb-photo" alt="arduino"></td><td>LETTORE RFID MFRC 522</td><td>1</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://www.twinschip.com/image/cache/catalog/Products%20Twins%20Chip%20Store%202020/1M%20Ohm%20Resistor%20X%205%20Pieces/1M%20Ohm%20Resistor-600x315w.jpeg" class="tb-photo" alt="arduino"></td><td>RESISTORI 10K</td><td>1</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://static.cytron.io/image/cache/catalog/products/BB-RELAY-5V-02/BB-RELAY-5V-02-800x800.png" class="tb-photo" alt="arduino"></td><td>MODULO RELÈ</td><td>1</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://aaenics.com/wp-content/uploads/2019/10/male-to-male-flex.jpg" class="tb-photo" alt="arduino"></td><td>JUMPERS</td><td>17</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://static.cytron.io/image/cache/catalog/products/BB-RELAY-5V-02/BB-RELAY-5V-02-800x800.png" class="tb-photo" alt="arduino"></td><td>LM 317 T*</td><td>17</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://static.rapidonline.com/catalogueimages/product/10/26/s10-2694p01wl.jpg" class="tb-photo" alt="arduino"></td><td>CONDENSATORE 0.1uF</td><td>17</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://www.westfloridacomponents.com/mm5/graphics/L10/200BXA10M10X16.jpg" class="tb-photo" alt="arduino"></td><td>CONDENSATORE 10uF</td><td>17</td><td><div class="btn-link">AMAZON</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="funzionamento">
+                    <p id="project-title">Introduzione</p>
+                    <p class="paragrafo" id="par1">1. RFID</p>
+                    <p class="text" id="funz">
+                        Tutti i sensori e rilevatori del progetto avranno bisogno di una configurazione iniziale, a partire dal lettore RFID fino al modulo RTC, per il primo con uno script di prova ricaveremo i codici della tessera/magnete date insieme al sensore, questi codici dovremmo inserirli nello script principale per la rilevazione delle carte per far partire l'irrigazione, procediamo dunque al collegamento su breadboard e ad Arduino (i pin sono uguali sia per Arduino UNO che per MINI e NANO) e a scaricare dal gestore librerie la libreria RFID.h.
+                    </p>
+                    <br>
+                    <img src="https://i.stack.imgur.com/1yl3f.jpg" class="phototext">
+                    <iframe src=https://create.arduino.cc/editor/mattiamularoni/adce9d18-380c-4079-9943-1dc50d7690a5/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+                    <p class="text" id="funz">
+                        Una volta caricato il codice su Arduino, si dovrà aprire la console seriale e avvicinare la carta, di seguito sono indicati i valori da salvare.
+                    </p>
+                    <br>
+                    <img src="https://win.adrirobot.it/rfid-rc522/rfid-rc522-TEST_03.jpg" class="phototext">
+                    <p class="text" id="funz">
+                        In questo caso bisognerà salvare solo le sequenze precedute da "HEX" (esadecimale).
+                    </p>
+                    <p class="paragrafo" id="par2">2. RTC</p>
+                    <p class="text" id="funz">
+                        Il modulo RTC è un dispositivo I²C, questa tecnologia ci permetterà di risparmiare numerosi collegamenti di pin sia per l'RTC che per il display (dotato anch'esso di modulo I²C), permettendoci di comunicare con essi tramite solo due cavi: master e slave (SDA e SCL).
+                        <br>
+                        Per far 'parlare' Arduino con i moduli è necessario di dotarsi della libreria <a href="https://github.com/adafruit/RTClib" style="color: rgb(211, 84, 0);">Rtclib.h</a>.
+                    </p>
+                    <img src="https://hub360.com.ng/wp-content/uploads/2015/11/ds1307-module-1.jpg" class="phototext">
+
+                    <p class="paragrafo" id="par2">3. Display 16x2 I²C</p>
+                    <p class="text" id="funz">
+                        Per visualizzare eventuali messaggi all'utente utilizzeremo un display 16x2 (2 righe e 16 colonne), avendo anch'esso un modulo I²C sarà possibile collegarlo in cascata al modulo RTC per interfacciarsi con Arduino.
+                        <br>
+                        Anche questa volta servirà una libreria, la <a href="https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library" style="color: rgb(211, 84, 0);">LiquidCrystalI2C.h</a>.
+                    </p>
+                    <br>
+                    <img src="https://i1.wp.com/www.maffucci.it/wp-content/uploads/2020/01/orologio-display-rtc-i2c.jpg?resize=640%2C428&ssl=1" class="phototext">
+                    <p id="project-title">Funzionamento</p>
+                    <p class="paragrafo" id="par1">1. Sensore PIR</p>
+                    <p class="text" id="funz">
+                        Il sensore PIR è un rilevatore di movimento basato sui fasci di luci infrarosse.
+                    </p>
+                    <br>
+                    <img src="https://cf5.s3.souqcdn.com/item/2020/06/18/84/26/01/0/item_L_8426010_3c2c396b43c6f.jpg" class="phototext">
+                    <img src="https://mindstormengg.com/wp-content/uploads/2019/10/12-03-19-04-37-32.png"class="phototext" style="margin-left: 50px;">
+                    <p class="paragrafo" id="par2">2. Ricavare informazioni dal sensore PIR</p>
+                    <p class="text" id="funz">
+                        Il sensore PIR è di tipo digitale e volumetrico, ovvero che quando esso rileverà un cambiamento nel volume (una stanza, un magazzino, ecc..) che sta analizzando in quel momento cambierà il suo stato da basso ad alto (da 0 ad 1); dal momento che il segnale tornerà stabile (e questo non vuol dire che la stanza sia ritornata alla disposizione originale) esso ritornerà a basso, un esempio lampante è nei bagni, quando si entra e il sensore rileva un cambiamento accende la luce, ma quando è un pò che si sta fermi e il sensore si ristabilizza su delle frequenze "fisse", ritorna a 0 spegnendo la luce.
+                    </p>
+                    <p class="text" id="funz">
+                        Per ricavare un segnale dal PIR utilizzeremo lo stesso sistema di differenza usato nello scorso progetto per il bottone.
+                    </p>
+                    <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);">pirValue = <span class="hljs-built_in" style="color: rgb(57, 115, 0);">digitalRead</span>(pir);
+                    diff = pirValue - pirValuePre;
+                    pirValuePre = pirValue;
+                    </pre>
+                    <p class="paragrafo" id="par3">3. Servo motori</p>
+                    <br>
+                    <img src="https://ardubotics.eu/12226-thickbox_default/towerpro-micro-servo-motor-360-degree-sg90.jpg" class="phototext">
+                    <p class="text" id="funz">
+                        Il motore servo è un tipo di motore a coppia e inclinazione variabile, per questo non è da confondere con un tradizionale motore CC a rotazione continua.
+                    </p>
+                    <p class="paragrafo" id="par4">4. Utilizzare il servo motore</p>
+                    <p class="text" id="funz">
+                        Per utilizzare i servo motori ci muniremo della libreria <span style="color: rgb(211, 84, 0);">servo.h</span>.
+                        <br>
+                        All'inizio del setup imposteremo i pin di collegamento dei servo e li porteremo rispettivamente a 180 e 0 gradi in modo da prepararli alla chiusura in caso di rilevazione di movimento.
+                    </p>
+                    <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><span class="hljs-built_in" style="color: rgb(57, 115, 0);">pinMode</span>(pir, <span class="hljs-literal" style="color: rgb(120, 169, 96);">INPUT</span>);
+                        motore1.<span class="hljs-built_in" style="color: rgb(57, 115, 0);">attach</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">11</span>);
+                        motore2.<span class="hljs-built_in" style="color: rgb(57, 115, 0);">attach</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">10</span>);
+                    </pre>
+                    <p class="text" id="funz">
+                        Fatto ciò non ci resta che terminare il codice con l'attivazione del sistema alla rilevazone di un movimento e il relativo sblocco tramite il bottone.
+                    </p>
+                </div>
+
+                <div class="codice" id="code">
+                    <p id="project-title">Codice</p>
+                    <iframe src=https://create.arduino.cc/editor/mattiamularoni/3fc8f68a-4b87-43da-bca9-884b3a2054e3/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+                </div>
+            </div> 
+        </div>
+
+        <div class="index-selector">
+            <p id="titolo-index">Indice</p>
+            <div class="linea-index"></div>
+            <a onclick="scrollSez('pres')">
+                <p class="index-link">PROVA A PRENDERLO</p>
+            </a>
+            <a onclick="scrollSez('tab')">
+                <p class="index-link">Lista componenti</p>
+            </a>
+            <a onclick="scrollSez('funz')">
+                <p class="index-link">Funzionamento</p>
+            </a>
+            <a onclick="scrollSez('par1')">
+                <p class="underindex-link">1. Sensore PIR</p>
+            </a>
+            <a onclick="scrollSez('par2')">
+                <p class="underindex-link">2. Ricavare informazioni dal sensore PIR</p>
+            </a>
+            <a onclick="scrollSez('par3')">
+                <p class="underindex-link">3. Servo motori</p>
+            </a>
+            <a onclick="scrollSez('par4')">
+                <p class="underindex-link">4. Utilizzare il servo motore</p>
+            </a>
+            <a onclick="scrollSez('code')">
+                <p class="index-link">Codice</p>
+            </a>
+        </div>
+    </div>
+    <div class="footer">
+        <p id="titolo-footer">MULARONI MATTIA 2021</p>
+
+        <div id="social">
+            <a href="#">
+                <img src="../../Home/social/Instagram.png" class="dim">
+            </a>
+            <a href="#">
+                <img src="../../Home/social/Facebook.png" class="dim">
+            </a>
+            <a href="#">
+                <img src="../../Home/social/Linkedin.png" class="dim">
+            </a>
+            <a href="#">
+                <img src="../../Home/social/Twitter.png" class="dim">
+            </a>  
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
