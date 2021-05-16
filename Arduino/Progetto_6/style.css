@@ -187,7 +187,7 @@ body{
     text-align: center;
 }
 
-#project-title{
+.project-title{
     color: var(--titoli);
     font-family: 'Quicksand', sans-serif;
     font-style: normal;
@@ -467,4 +467,8 @@ table{
 font-family: 'Quicksand', sans-serif;
 font-size: 40px;
 color: white;
+}
+
+li{
+    margin-left: 50px;
 }

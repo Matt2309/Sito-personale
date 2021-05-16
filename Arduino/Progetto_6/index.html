@@ -49,10 +49,17 @@
         <div class="divide">
             <div class="progetto">
                 <div class="presentazione" id="pres">
-                        <p id="project-title">ARDUINO GARDEN SYSTEM</p>
+                        <p class="project-title">ARDUINO GARDEN SYSTEM</p>
                     <div class="linea"></div>
 
                     <div class="slider" width="70%">
+                        <div class="slidePhoto fade">
+                            <img src="./progetto.png" height="auto" class="head-photo">
+                        </div>
+
+                        <div class="slidePhoto fade">
+                            <img src="./Orto_bb.png" height="auto" class="head-photo">
+                        </div>
 
                         <div class="slidePhoto fade">
                             <img src="./IMG_20210425_161009.jpg" height="auto" class="head-photo">
@@ -60,10 +67,6 @@
 
                         <div class="slidePhoto fade">
                             <img src="./IMG_20210503_212535.jpg" height="auto" class="head-photo">
-                        </div>
-
-                        <div class="slidePhoto fade">
-                            <img src="./Orto_bb.png" height="auto" class="head-photo">
                         </div>
                         
                         <a class="prev" onclick="cambiaSlide(-1)">&#10094;</a>
@@ -74,6 +77,7 @@
                         <span class="dot" onclick="slideCorrente(1)"></span>
                         <span class="dot" onclick="slideCorrente(2)"></span>
                         <span class="dot" onclick="slideCorrente(3)"></span>
+                        <span class="dot" onclick="slideCorrente(4)"></span>
                     </div>
                     
                     <div class="pres">
@@ -86,7 +90,7 @@
                 </div>
 
                 <div class="tabella" id="tab">
-                    <p id="project-title">Lista componenti</p>
+                    <p class="project-title">Lista componenti</p>
                     <table id="table">
                         <tr>
                             <th id="sx">IMMAGINE</th><th>NOME PRODOTTO</th><th>QUANTITÀ</th><th id="dx">LINK</th>
@@ -128,7 +132,7 @@
                 </div>
 
                 <div class="funzionamento">
-                    <p id="project-title">Introduzione</p>
+                    <p class="project-title">Introduzione</p>
                     <p class="paragrafo" id="par1">1. RFID</p>
                     <p class="text" id="funz">
                         Tutti i sensori e rilevatori del progetto avranno bisogno di una configurazione iniziale, a partire dal lettore RFID fino al modulo RTC, per il primo con uno script di prova ricaveremo i codici della tessera/magnete date insieme al sensore, questi codici dovremmo inserirli nello script principale per la rilevazione delle carte per far partire l'irrigazione, procediamo dunque al collegamento su breadboard e ad Arduino (i pin sono uguali sia per Arduino UNO che per MINI e NANO) e a scaricare dal gestore librerie la libreria RFID.h.
@@ -152,7 +156,7 @@
                     </p>
                     <img src="https://hub360.com.ng/wp-content/uploads/2015/11/ds1307-module-1.jpg" class="phototext">
 
-                    <p class="paragrafo" id="par2">3. Display 16x2 I²C</p>
+                    <p class="paragrafo" id="par3">3. Display 16x2 I²C</p>
                     <p class="text" id="funz">
                         Per visualizzare eventuali messaggi all'utente utilizzeremo un display 16x2 (2 righe e 16 colonne), avendo anch'esso un modulo I²C sarà possibile collegarlo in cascata al modulo RTC per interfacciarsi con Arduino.
                         <br>
@@ -160,49 +164,103 @@
                     </p>
                     <br>
                     <img src="https://i1.wp.com/www.maffucci.it/wp-content/uploads/2020/01/orologio-display-rtc-i2c.jpg?resize=640%2C428&ssl=1" class="phototext">
-                    <p id="project-title">Funzionamento</p>
-                    <p class="paragrafo" id="par1">1. Sensore PIR</p>
+                </div>
+                <div class="funzionamento">
+                    <p class="project-title 1">Prototipo</p>
+                    <p class="paragrafo" id="par4">1. Breadboard</p>
                     <p class="text" id="funz">
-                        Il sensore PIR è un rilevatore di movimento basato sui fasci di luci infrarosse.
+                        Per verificare che tutti gli elementi funzionino tra loro è necessario assemblare i componenti su una breadboard, di seguito lo schema di montaggio:
                     </p>
                     <br>
-                    <img src="https://cf5.s3.souqcdn.com/item/2020/06/18/84/26/01/0/item_L_8426010_3c2c396b43c6f.jpg" class="phototext">
-                    <img src="https://mindstormengg.com/wp-content/uploads/2019/10/12-03-19-04-37-32.png"class="phototext" style="margin-left: 50px;">
-                    <p class="paragrafo" id="par2">2. Ricavare informazioni dal sensore PIR</p>
+                    <img src="./Orto_bb.png" class="phototext">
+                    <img src="./IMG_20210425_161009.jpg" class="phototext" width="45%" height="auto">
+                </div>
+                <div class="funzionamento">
+                    <p class="project-title">Spiegazione Codice</p>
+                    <p class="paragrafo" id="par5">1. RFID</p>
                     <p class="text" id="funz">
-                        Il sensore PIR è di tipo digitale e volumetrico, ovvero che quando esso rileverà un cambiamento nel volume (una stanza, un magazzino, ecc..) che sta analizzando in quel momento cambierà il suo stato da basso ad alto (da 0 ad 1); dal momento che il segnale tornerà stabile (e questo non vuol dire che la stanza sia ritornata alla disposizione originale) esso ritornerà a basso, un esempio lampante è nei bagni, quando si entra e il sensore rileva un cambiamento accende la luce, ma quando è un pò che si sta fermi e il sensore si ristabilizza su delle frequenze "fisse", ritorna a 0 spegnendo la luce.
+                        Paartendo dalla dichiarazione delle variabili, è necessario sostituire i campi <span style="color: rgb(136, 0, 0);">mioCod</span> con il codice della tessera con la quale verrà attivata l'irrigazione, ovviamente i codici sono diversi per ogniuno (vedi sezione RFID).
                     </p>
+                    <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(255, 255, 255); color: rgb(67, 79, 84);"><span class="hljs-built_in" style="color: rgb(211, 84, 0);">String</span> mioCod = <span class="hljs-string" style="color: rgb(0, 92, 95);">"7387781D"</span>; <span class="hljs-comment" style="color: rgba(149, 165, 166, 0.8);">//carta</span></pre>
+
+                    <p class="paragrafo" id="par6">2. Orari</p>
                     <p class="text" id="funz">
-                        Per ricavare un segnale dal PIR utilizzeremo lo stesso sistema di differenza usato nello scorso progetto per il bottone.
-                    </p>
-                    <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);">pirValue = <span class="hljs-built_in" style="color: rgb(57, 115, 0);">digitalRead</span>(pir);
-                    diff = pirValue - pirValuePre;
-                    pirValuePre = pirValue;
-                    </pre>
-                    <p class="paragrafo" id="par3">3. Servo motori</p>
-                    <br>
-                    <img src="https://ardubotics.eu/12226-thickbox_default/towerpro-micro-servo-motor-360-degree-sg90.jpg" class="phototext">
-                    <p class="text" id="funz">
-                        Il motore servo è un tipo di motore a coppia e inclinazione variabile, per questo non è da confondere con un tradizionale motore CC a rotazione continua.
-                    </p>
-                    <p class="paragrafo" id="par4">4. Utilizzare il servo motore</p>
-                    <p class="text" id="funz">
-                        Per utilizzare i servo motori ci muniremo della libreria <span style="color: rgb(211, 84, 0);">servo.h</span>.
+                        Fatto ciò bisogna cambiare l'orario di accensione dei relè e il tempo per il quale devono rimanere accesi, si andra quindi ad agire su <span style="color: rgb(136, 0, 0);">ONsec</span> per i secondi, <span style="color: rgb(136, 0, 0);">ONmin</span> per i minuti e <span style="color: rgb(136, 0, 0);">ONora</span> per le ore, mentre per il tempo di irrigazione si agirà sui campi <span style="color: rgb(136, 0, 0);">secondiON</span>, ATTENZIONE: il tempo è espresso in secondi (1 ora = 3600s).
                         <br>
-                        All'inizio del setup imposteremo i pin di collegamento dei servo e li porteremo rispettivamente a 180 e 0 gradi in modo da prepararli alla chiusura in caso di rilevazione di movimento.
+                        P.S. il secondo tempo di irrigazione è utilizzato anche dalla modalità RFID.
                     </p>
-                    <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><span class="hljs-built_in" style="color: rgb(57, 115, 0);">pinMode</span>(pir, <span class="hljs-literal" style="color: rgb(120, 169, 96);">INPUT</span>);
-                        motore1.<span class="hljs-built_in" style="color: rgb(57, 115, 0);">attach</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">11</span>);
-                        motore2.<span class="hljs-built_in" style="color: rgb(57, 115, 0);">attach</span>(<span class="hljs-number" style="color: rgb(136, 0, 0);">10</span>);
+                    <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(255, 255, 255); color: rgb(67, 79, 84);"><span class="hljs-comment" style="color: rgba(149, 165, 166, 0.8);">//PRIMA PROGRAMMAZIONE</span>
+<span class="hljs-type" style="color: rgb(0, 92, 95);">int</span> ONsec1 = <span class="hljs-number" style="color: rgb(138, 123, 82);">00</span>;
+<span class="hljs-type" style="color: rgb(0, 92, 95);">int</span> ONmin1 = <span class="hljs-number" style="color: rgb(138, 123, 82);">00</span>;
+<span class="hljs-type" style="color: rgb(0, 92, 95);">int</span> ONora1 = <span class="hljs-number" style="color: rgb(138, 123, 82);">19</span>;
+
+<span class="hljs-type" style="color: rgb(0, 92, 95);">int</span> secondiON1 = <span class="hljs-number" style="color: rgb(138, 123, 82);">3600</span>;
+
+<span class="hljs-comment" style="color: rgba(149, 165, 166, 0.8);">//SECONDA PROGRAMMAZIONE</span>
+<span class="hljs-type" style="color: rgb(0, 92, 95);">int</span> ONsec2 = <span class="hljs-number" style="color: rgb(138, 123, 82);">00</span>;
+<span class="hljs-type" style="color: rgb(0, 92, 95);">int</span> ONmin2 = <span class="hljs-number" style="color: rgb(138, 123, 82);">00</span>;
+<span class="hljs-type" style="color: rgb(0, 92, 95);">int</span> ONora2 = <span class="hljs-number" style="color: rgb(138, 123, 82);">6</span>;
+
+<span class="hljs-type" style="color: rgb(0, 92, 95);">int</span> secondiON2 = <span class="hljs-number" style="color: rgb(138, 123, 82);">1800</span>; <span class="hljs-comment" style="color: rgba(149, 165, 166, 0.8);">//anche RFID</span>
                     </pre>
                     <p class="text" id="funz">
-                        Fatto ciò non ci resta che terminare il codice con l'attivazione del sistema alla rilevazone di un movimento e il relativo sblocco tramite il bottone.
+                        In questo caso la prima programmazione partirà alle ore 19:00 e funzionerà per 1 ora, mentre la seconda partirà alle 6:00 per mezz'ora (anche con lo start con carta RFID la durata sarà di mezz'ora).
+                    </p>
+                    
+                    <p class="paragrafo" id="par7">3. Relè</p>
+                    <p class="text" id="funz">
+                        Nel mio caso, il mio modulo relè ha una logica inversa, ovvero che se da Arduino si da uno stato alto (HIGH) il relè si disattiverà, mentre con uno stato basso (LOW) esso si attiverà chiudendo il circuito di alimentazione del'elettrovalvola, perciò nel programma i due comandi saranno invertiti, se invece doveste avere dei moduli a logica "normale" basterà invertire tutti gli HIGH del relè con LOW e viceversa.
+                    </p>
+                    <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(255, 255, 255); color: rgb(67, 79, 84);"><span class="hljs-built_in" style="color: rgb(211, 84, 0);">digitalWrite</span>(pinRele, <span class="hljs-literal" style="color: rgb(211, 84, 0);">HIGH</span>); <span class="hljs-comment" style="color: rgba(149, 165, 166, 0.8);">//contrario perchè si accende a 0</span></pre>
+                    
+                    <p class="paragrafo" id="par8">4. Programma</p>
+                    <p class="text" id="funz">
+                        Il programma è strutturato in 3 sottoprogrammi:
+                        <ul>
+                            <li><span style="color: rgb(136, 0, 0);">LCDorario(); </span> si occupa di stampare l'orario e la data sull'LCD</li>
+                            <li><span style="color: rgb(136, 0, 0);">ceckOrario(); </span> controlla se l'orario attuale corrisponde a quello impostato per inizializzare l'irrigazione, e in caso la attiva.</li>
+                            <li><span style="color: rgb(136, 0, 0);">ceckRFID(); </span> controlla se viene avvicinata una carta RFID, se la rileva e il codice è giusto attiva l'irrigazione.</li>
+                        </ul>
                     </p>
                 </div>
 
                 <div class="codice" id="code">
-                    <p id="project-title">Codice</p>
+                    <p class="project-title">Codice</p>
                     <iframe src=https://create.arduino.cc/editor/mattiamularoni/3fc8f68a-4b87-43da-bca9-884b3a2054e3/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+                </div>
+
+                <div class="funzionamento">
+                    <p class="project-title">Assemblaggio</p>
+                    <p class="paragrafo" id="par9">1. Basetta millefori</p>
+                    <p class="text" id="funz">
+                        Una volta assicuratosi che il tutto funziona correttamente e che non ci sono impedimenti, è possibile saldare tutto il circuito su una basetta millefori per rendere tutti i collegamenti più stabili e duraturi nel caso in cui il circuito venga introdotto in una scatola stagna.
+                    </p>
+                    <br>
+                    <img src="./IMG_20210508_191434.jpg" class="phototext">
+                    <img src="./IMG_20210508_191427.jpg" class="phototext" width="48%" height="auto">
+                    <br>
+                    <p class="text" id="funz">
+                        Come è possibile vedere dall'immagine è stato saldato anche un circuito di regolazione per alimentare Arduino da una fonte a 12v, per permettere ciò è stato usato un regolatore di tensione LM 317 T con relativi condensatori e resistenze di regolazione, di seguito è presente il circuito:
+                    </p>
+                    <img src="https://lh3.googleusercontent.com/proxy/YnaxCOxlafKR7b66H9kXjqaej4rsCq-uiamH4mKx71dIcTSnXkEIZaRpZ9KwJcn8UN2-0kOJVaCTgy3CgURQYcq5yTx1t5omQZem-Wdf7irtNNqQoq9_xg" class="phototext">
+                    <br>
+                    <p class="text" id="funz">
+                        Nel caso si dovesse abbassare la tensione da 12v a 5v (come in questo caso), bisognerà inserire alla posizione R2 un resistore da 820 ohm al posto della resistenza variabile da 720, dato che la tensione non necessita di essere variata.
+                    </p>
+                    <br>
+                    <p class="paragrafo" id="par10">2. Scatola stagna</p>
+                    <img src="./progetto.png" class="phototext">
+                    <p class="text" id="funz">
+                        Per permettere di far funzionare il sistema all'interno dell'orto, e non danneggiandolo con l'acqua, è consigliabile usare una scatola stagna ip56 (o superiore) la quale contenga tutto il circuito, al suo fianco verrà posta un'ulteriore scatola stagna con barra DIN per contenere l'interrutore magnetotermico (per evitare danni da cortocircuiti o sovraccarichi) e l'alimentatore a 12v.
+                    </p>
+                    <br>
+                    <img src="./IMG_20210516_211934.jpg" class="phototext">
+                    <img src="./IMG_20210516_211948.jpg" class="phototext">
+                    <img src="./IMG_20210516_212000.jpg" class="phototext">
+                    <p class="text" id="funz">
+                        Per agganciare meglio le parti alla scatola sono stati stampati dei supporti in 3D i quali verranno avvitati alle guide in plastica sul fondo.
+                    </p>
+
                 </div>
             </div> 
         </div>
@@ -211,28 +269,55 @@
             <p id="titolo-index">Indice</p>
             <div class="linea-index"></div>
             <a onclick="scrollSez('pres')">
-                <p class="index-link">PROVA A PRENDERLO</p>
+                <p class="index-link">ARDUINO GARDEN SYSTEM</p>
             </a>
             <a onclick="scrollSez('tab')">
                 <p class="index-link">Lista componenti</p>
             </a>
             <a onclick="scrollSez('funz')">
-                <p class="index-link">Funzionamento</p>
+                <p class="index-link">Introduzione</p>
             </a>
             <a onclick="scrollSez('par1')">
-                <p class="underindex-link">1. Sensore PIR</p>
+                <p class="underindex-link">1. RFID</p>
             </a>
             <a onclick="scrollSez('par2')">
-                <p class="underindex-link">2. Ricavare informazioni dal sensore PIR</p>
+                <p class="underindex-link">2. RTC</p>
             </a>
             <a onclick="scrollSez('par3')">
-                <p class="underindex-link">3. Servo motori</p>
+                <p class="underindex-link">3. Display 16x2 I²C</p>
+            </a>
+            <a onclick="scrollSez('project-title 1')">
+                <p class="index-link">Prototipo</p>
             </a>
             <a onclick="scrollSez('par4')">
-                <p class="underindex-link">4. Utilizzare il servo motore</p>
+                <p class="underindex-link">1. Breadboard</p>
+            </a>
+            <a onclick="scrollSez('project-title 1')">
+                <p class="index-link">Spiegazione Codice</p>
+            </a>
+            <a onclick="scrollSez('par5')">
+                <p class="underindex-link">1. RFID</p>
+            </a>
+            <a onclick="scrollSez('par6')">
+                <p class="underindex-link">2. Orari</p>
+            </a>
+            <a onclick="scrollSez('par7')">
+                <p class="underindex-link">3. Relè</p>
+            </a>
+            <a onclick="scrollSez('par8')">
+                <p class="underindex-link">4. Programma</p>
             </a>
             <a onclick="scrollSez('code')">
                 <p class="index-link">Codice</p>
+            </a>
+            <a onclick="scrollSez('project-title 1')">
+                <p class="index-link">Assemblaggio</p>
+            </a>
+            <a onclick="scrollSez('par9')">
+                <p class="underindex-link">1. Basetta millefori</p>
+            </a>
+            <a onclick="scrollSez('par10')">
+                <p class="underindex-link">2. Scatola stagna</p>
             </a>
         </div>
     </div>
