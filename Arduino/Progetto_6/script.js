@@ -19,7 +19,7 @@ function tornaSu(){
 }
 let div = "";
 function scrollSez(div){
-    document.getElementById(div).scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+    document.getElementById(div).scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
 }
 
 var numSlide = 1;
