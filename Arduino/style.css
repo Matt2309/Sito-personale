@@ -161,9 +161,7 @@ a:link, a:visited, a:active{
 
 #articoli{
     display: flex;
-    justify-content: space-around;
-
-    flex-direction: row;
+    justify-content: center;
 }
 
 .container{
@@ -257,3 +255,20 @@ a:link, a:visited, a:active{
     font-size: 40px;
     color: white;
   }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px 20px;
+    grid-template-areas:
+      "Progetto1 Progetto2"
+      "Progetto3 Progetto4"
+      "Progetto5 Progetto6";
+  }
+  .Progetto1 { grid-area: Progetto1; }
+  .Progetto2 { grid-area: Progetto2; }
+  .Progetto3 { grid-area: Progetto3; }
+  .Progetto4 { grid-area: Progetto4; }
+  .Progetto5 { grid-area: Progetto5; }
+  .Progetto6 { grid-area: Progetto6; }
