@@ -191,7 +191,7 @@ a:link, a:visited, a:active{
 }
 
 .item-alto{
-  background-color: #0088ff;
+  background-color: var(--teal);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -203,6 +203,7 @@ a:link, a:visited, a:active{
   height: 60%;
   width: 100%;
 }
+
 
 .a{
   grid-column: 1 / 1;
@@ -243,7 +244,7 @@ a:link, a:visited, a:active{
   display: block;
 
   width: 440px;
-  height: 100px;
+  height: 90px;
   padding: 30px;
   background-color: white;
 
@@ -264,6 +265,12 @@ a:link, a:visited, a:active{
   font-family: Arial, Helvetica, sans-serif;
   color:#0544f2;
   font-size: 20px;
+}
+
+.sottotitolo-container{
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 15px;
 }
 
 #frecciaSu{
